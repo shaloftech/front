@@ -1,0 +1,334 @@
+/* Header Styling */
+/* ✅ Prevent Horizontal Scrolling */
+html,
+body {
+  overflow-x: hidden; /* Prevent scrolling left/right */
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background-color: #02042b;
+  position: relative;
+}
+
+/* Logo */
+.logo img {
+  height: 80px;
+}
+/* Modal Background (Overlay) */
+.modal-login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Slight overlay effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Content (Plain Black Background) */
+.modal-content1 {
+  background: #02042b; /* Plain black box for login/signup */
+  padding: 30px;
+  width: 320px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content1 h2 {
+  color: white; /* White text for better visibility */
+  font-size: 24px;
+}
+
+.modal-content1 input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  background: #1e1e1e; /* Darker input field */
+  color: white;
+  border-radius: 5px;
+  outline: none;
+}
+
+.modal-btn {
+  width: 100%;
+  padding: 12px;
+  background: #10b9f3;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  background: #0d97db;
+}
+
+/* Switch between Login and Signup */
+.switch-text {
+  color: white; /* White text */
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.switch-text span {
+  color: #10b9f3;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close {
+  float: right;
+  /* position: absolute; */
+  top: 15px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Ensure modal is on top */
+.modal-login,
+.modal-content1 {
+  z-index: 2000;
+}
+
+/* Responsive Fix */
+@media screen and (max-width: 480px) {
+  .modal-content1 {
+    width: 90%;
+  }
+}
+
+/* Desktop Navigation Bar */
+.desktop-nav {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  padding: 12px 30px;
+  border-radius: 40px;
+}
+
+.desktop-nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.profile-container {
+  position: relative;
+}
+
+.profile-icon {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-modal {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background: #1c1c1c;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.profile-btn {
+  background: #10b9f3;
+  border: none;
+  color: white;
+  padding: 8px;
+  margin: 5px 0px 5px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-btn:hover,
+.logout-btn:hover {
+  background: #0a8db0;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 8px;
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.logout-btn:hover {
+  background-color: #e63939;
+}
+
+.desktop-nav li {
+  position: relative;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: 0.3s ease;
+}
+
+.desktop-nav .active {
+  color: #10b9f3;
+  font-weight: 600;
+}
+
+.desktop-nav .active::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: #10b9f3;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.desktop-nav a:hover {
+  color: #10b9f3;
+}
+
+/* Desktop Wallet Button */
+.desktop-wallet {
+  background: transparent;
+  color: #10b9f3;
+  border: 1px solid #10b9f3;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.desktop-wallet:hover {
+  background: #10b9f3;
+  color: white;
+}
+
+/* ✅ Mobile Menu Icon - Always Visible */
+.menu-icon {
+  position: absolute;
+  top: 50%; /* middle of header vertically */
+  right: 20px; /* keep it 20px from right */
+  transform: translateY(-50%); /* shift up by half its own height */
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+/* ✅ Mobile Navigation - Limit to 50% of Screen */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: -50%; /* Hide off-screen initially */
+  width: 50%;
+  height: 100%;
+  background-color: #02042b; /* Match header background */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; /* Align to the left */
+  padding-top: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+  padding-left: 20px;
+}
+
+/* ✅ When Menu is Open, Slide it in */
+.mobile-nav.open {
+  left: 0;
+}
+
+/* ✅ Dark Overlay to Prevent Overlapping Text */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+}
+
+.mobile-nav.open + .mobile-overlay {
+  display: block;
+}
+
+/* ✅ Fix Mobile Navigation Font Size */
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  text-align: left; /* Align to left */
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px; /* Smaller font */
+}
+
+/* ✅ Mobile Wallet & Logout Buttons */
+.mobile-nav .connect-wallet,
+.mobile-nav .logout-btn {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ✅ Hide Desktop Navigation on Mobile */
+@media screen and (max-width: 768px) {
+  .desktop-nav,
+  .desktop-wallet {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .logo1 img {
+    height: 80px; /* bump up for mobile clarity */
+  }
+
+  /* Tweak header padding so it still fits */
+  .header {
+    padding: 15px 20px;
+  }
+
+  /* Make sure the menu-icon doesn't cover it */
+  .logo1 {
+    z-index: 1001; /* sit above the menu button */
+  }
+}

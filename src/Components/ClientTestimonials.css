@@ -1,0 +1,124 @@
+.client-testimonials {
+  text-align: center;
+  padding: 50px;
+  background: #f5f9fc;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #000;
+}
+
+.subheading {
+  font-size: 18px;
+  color: #004c75;
+  margin-top: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Testimonial Layout */
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* Review Circle */
+.review-circle {
+  background: black;
+  color: white;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.stars {
+  font-size: 20px;
+  color: gold;
+}
+
+.review-count {
+  font-size: 14px;
+}
+
+/* Testimonial Text */
+.testimonial-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.review-text {
+  font-size: 18px;
+  color: #004c75;
+  font-style: italic;
+}
+
+.review-author {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.review-role {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  background: none;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 10px 15px;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .review-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial-content {
+    max-width: 90%;
+  }
+}

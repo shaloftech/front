@@ -1,0 +1,99 @@
+/* :root {
+  --background-color: #fff;
+  --text-color: #000;
+  --primary-color: #5358d5;
+  --secondary-color: #7d9aea;
+  --highlight-color: #fefefe;
+  --modal-background: #fefefe;
+}
+
+[data-theme="dark"] {
+  --background-color: #3f3f3f;
+  --text-color: #f0f0f0;
+  --primary-color: #3f3f3f;
+  --secondary-color: #3f3f3f;
+  --highlight-color: #3f3f3f;
+  --modal-background: #3f3f3f;
+} */
+
+.summary-header {
+  display: flex;
+  align-items: center;
+}
+
+.summary-header img.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.transaction-details .label {
+  font-weight: bold;
+}
+
+.transaction-details .value {
+  font-weight: normal;
+}
+
+.status.completed {
+  color: green;
+}
+
+.status.pending {
+  color: orange;
+}
+/* TransactionSummary.css */
+
+.transaction-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  background-color: #ffffff;
+  color: black;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.transaction-table th {
+  text-align: left;
+  padding: 12px;
+  color: #999;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.transaction-summary {
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 8px;
+  color: #000000;
+}
+
+.transaction-summary:hover {
+  background-color: #f2e2e2;
+}
+
+.transaction-summary td {
+  padding: 14px;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  border-top: 1px solid #bebebe;
+  border-bottom: 1px solid #7c7c7c;
+}
+
+.transaction-details-row td {
+  padding: 14px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #818181;
+  font-size: 13px;
+  color: #000000;
+  border-radius: 0 0 8px 8px;
+}
+
+.completed {
+  color: #22c55e;
+}
+
+.pending {
+  color: orange;
+}

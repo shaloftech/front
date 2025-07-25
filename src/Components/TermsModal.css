@@ -1,0 +1,100 @@
+/* Modal background overlay */
+.modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal box */
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  width: 90%;
+  max-width: 720px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+/* Modal heading */
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Modal terms text */
+.terms-text {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: 0.96rem;
+  color: #444;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Scrollbar styling (optional) */
+.terms-text::-webkit-scrollbar {
+  width: 6px;
+}
+.terms-text::-webkit-scrollbar-track {
+  background: transparent;
+}
+.terms-text::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 3px;
+}
+.terms-list {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+  color: #444;
+  font-size: 0.95rem;
+  list-style-type: disc;
+  list-style-position: outside;
+  text-align: justify; /* This justifies the paragraph text */
+}
+
+.terms-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

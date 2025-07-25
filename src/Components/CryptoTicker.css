@@ -1,0 +1,55 @@
+/* Crypto Ticker Styling */
+.crypto-ticker {
+  width: 100%;
+  overflow: hidden;
+  background-color: #111;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+/* Scrolling Animation */
+.ticker-content {
+  display: flex;
+  gap: 30px;
+  animation: scroll-left 25s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Crypto Item */
+.ticker-item {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Crypto Logo */
+.crypto-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Green for price increase, Red for price drop */
+.ticker-item.up {
+  color: #10b981; /* Green */
+}
+
+.ticker-item.down {
+  color: #ef4444; /* Red */
+}

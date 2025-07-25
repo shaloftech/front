@@ -1,0 +1,104 @@
+.crypto-excellence {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background: linear-gradient(to bottom, #f8fbfd, #e3eaf0);
+}
+
+.content {
+  max-width: 50%;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: bold;
+  color: #111;
+}
+
+.highlight {
+  color: #007bff;
+}
+
+p {
+  font-size: 18px;
+  color: #444;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.options {
+  margin-top: 20px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 20px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.option:hover {
+  color: #007bff;
+}
+.click-description {
+  font-size: 15px;
+  color: #444;
+  margin-top: 10px;
+  padding-left: 20px;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.blue-text {
+  color: #007bff;
+}
+
+.arrow {
+  font-size: 22px;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.option:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Image Styling */
+.image-container {
+  max-width: 40%;
+  text-align: center;
+}
+
+.crypto-image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px; /* 🔧 This curves the edges */
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .crypto-excellence {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .image-container {
+    max-width: 80%;
+    margin-top: 30px;
+  }
+
+  .crypto-image {
+    width: 250px;
+  }
+}

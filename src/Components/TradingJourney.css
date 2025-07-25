@@ -1,0 +1,87 @@
+.trading-journey {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  color: white;
+  padding: 50px 80px;
+}
+
+/* Left Side Content */
+.trading-content {
+  max-width: 50%;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #007bff;
+}
+
+.subheading {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ddd;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Checkmark Icon */
+.checkmark {
+  color: #00cc66;
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+/* Right Side - Image Slider */
+.image-slider {
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.slider-image {
+  width: 350px;
+  height: auto;
+  border-radius: 15px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .trading-journey {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .trading-content {
+    max-width: 100%;
+  }
+
+  .image-slider {
+    max-width: 80%;
+    margin-top: 30px;
+  }
+
+  .slider-image {
+    width: 250px;
+  }
+}

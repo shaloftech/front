@@ -1,0 +1,41 @@
+/* Transactions.css */
+.button-group {
+  display: flex;
+  flex-wrap: wrap; /* allow buttons to wrap to new lines */
+  justify-content: center; /* center them on small screens */
+  gap: 8px; /* space between buttons */
+  margin: 0 auto 16px auto; /* center container + bottom spacing */
+  max-width: 600px; /* optional: constrain overall width */
+}
+.tab-button {
+  flex: 1 1 30%; /* base width ~30%, can shrink/grow */
+  min-width: 120px; /* never get smaller than this */
+  padding: 10px 16px;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Active vs inactive styles: tweak to taste */
+.tab-button.active {
+  background-color: #198754;
+  color: #fff;
+}
+.tab-button:not(.active) {
+  background-color: #21262d;
+  color: #ccc;
+}
+@media (max-width: 500px) {
+  .tab-button {
+    flex: 1 1 45%; /* two per row */
+  }
+}
+
+@media (max-width: 350px) {
+  .tab-button {
+    flex: 1 1 100%; /* one per row */
+  }
+}

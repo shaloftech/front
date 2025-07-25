@@ -1,0 +1,125 @@
+/* ------------------------------
+   Result.css — complete styling
+   ------------------------------ */
+
+/* Tabs */
+.result-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+.result-tabs button {
+  padding: 10px 20px;
+  background: #21262d;
+  border: 1px solid #198754;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: normal;
+}
+.result-tabs button.active {
+  background: #198754;
+  font-weight: bold;
+}
+
+/* Download & Pagination Buttons */
+.download-btn,
+.pagination-btn {
+  padding: 8px 16px;
+  background: #198754;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin: 8px 0;
+  width: auto;
+}
+.pagination-btn {
+  border: 1px solid #198754;
+  margin: 8px 4px;
+}
+
+/* Table wrapper for horizontal scroll */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Base table styling */
+.table-responsive table {
+  width: auto !important;
+  min-width: 800px; /* adjust if you add/remove columns */
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.table-responsive th,
+.table-responsive td {
+  padding: 10px;
+  border-bottom: 1px solid #2c2c2c;
+}
+.table-responsive th {
+  background: #161b22;
+  color: #fff;
+  border-bottom: 2px solid #30363d;
+  font-weight: bold;
+  text-align: left;
+}
+.table-responsive td {
+  background: #0d1117;
+  color: #e6e6e6;
+}
+
+/* ------------------------------
+     Responsive adjustments (≤768px)
+     ------------------------------ */
+@media (max-width: 768px) {
+  /* let the table fill its container and be swipeable */
+  .table-responsive table {
+    width: 100% !important;
+    min-width: unset;
+  }
+
+  /* shrink tab buttons */
+  .result-tabs button {
+    flex: 1 1 45%;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  /* full-width controls */
+  .download-btn,
+  .pagination-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* tighter cells */
+  .table-responsive th,
+  .table-responsive td {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+}
+
+/* ------------------------------
+     Further squeeze (≤600px)
+     ------------------------------ */
+@media (max-width: 600px) {
+  .result-tabs button,
+  .download-btn,
+  .pagination-btn {
+    padding: 6px 8px !important;
+    font-size: 12px !important;
+    margin: 4px 0 !important;
+  }
+
+  .table-responsive th,
+  .table-responsive td {
+    padding: 4px 6px !important;
+    font-size: 11px !important;
+  }
+}

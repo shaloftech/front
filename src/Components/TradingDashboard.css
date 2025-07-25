@@ -1,0 +1,259 @@
+.dashboard-container {
+  background-color: #0d1117;
+  color: #e6e6e6;
+  padding: 1rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #161b22;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.dashboard-header select {
+  padding: 6px 10px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+}
+
+.coin-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: 14px;
+}
+
+.main-content3 {
+  display: grid;
+  grid-template-columns: 4fr 1.5fr 1.5fr;
+  gap: 1rem;
+}
+
+.chart-area {
+  background-color: #161b22;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 420px;
+}
+
+.order-book,
+.market-pairs {
+  background-color: #161b22;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 420px;
+  overflow-y: auto;
+}
+.trade-history h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+.trade-history {
+  background-color: #161b22;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+.bottom-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.order-book h3,
+.market-pairs h3 {
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 0.5rem;
+}
+
+.order-row,
+.pair-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.trade-history {
+  background-color: #161b22;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.trade-history h3 {
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 0.5rem;
+}
+
+.trade-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 13px;
+}
+
+.green {
+  color: #10b981;
+}
+
+.red {
+  color: #ef4444;
+}
+.order-market-toggle {
+  background-color: #161b22;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.75rem;
+}
+
+.tab-buttons button {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  padding: 6px 12px;
+  color: #e6e6e6;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+
+.tab-buttons button.active {
+  background-color: #21262d;
+  border-bottom: 2px solid #10b981;
+  font-weight: bold;
+}
+
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.trade-box-area {
+  background-color: #161b22;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 420px;
+  overflow-y: auto;
+}
+.buy-toggle {
+  background-color: #0f5132;
+  border: 1px solid #198754;
+  color: #d1e7dd;
+}
+
+.sell-toggle {
+  background-color: #842029;
+  border: 1px solid #dc3545;
+  color: #f8d7da;
+}
+
+.buy-toggle.active {
+  background-color: #198754;
+  font-weight: bold;
+}
+
+.sell-toggle.active {
+  background-color: #dc3545;
+  font-weight: bold;
+}
+/* ───────────────────────────────────────────── */
+/* RESPONSIVE LAYOUT */
+/* ───────────────────────────────────────────── */
+
+@media (max-width: 1200px) {
+  /* move to two columns instead of three */
+  .main-content3 {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /* stack bottom section components vertically */
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  /* header: stack select + stats */
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .dashboard-header select {
+    width: 100% !important;
+    max-width: none;
+  }
+
+  .coin-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* main content: single column */
+  .main-content3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* allow chart & panels to grow naturally */
+  .chart-area,
+  .order-book,
+  .market-pairs,
+  .trade-box-area,
+  .order-market-toggle {
+    height: auto;
+    padding: 1rem;
+  }
+
+  /* stack the tab‐buttons vertically if needed */
+  .order-market-toggle .tab-buttons,
+  .trade-box-area .tab-buttons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* bottom section: single column */
+  .bottom-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* shrink fonts for tiny screens */
+  .coin-stats span,
+  .order-row,
+  .pair-row,
+  .trade-row {
+    font-size: 12px;
+  }
+
+  .tab-buttons button,
+  .buy-toggle,
+  .sell-toggle {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+}

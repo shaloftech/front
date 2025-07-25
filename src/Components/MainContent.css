@@ -1,0 +1,240 @@
+/* Main Hero Section */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(
+    to right,
+    #050929,
+    #090f3b,
+    #31334f,
+    #090f3b,
+    #050929
+  );
+  color: white;
+  flex-wrap: wrap;
+}
+
+/* Left Text Section */
+.text-section {
+  max-width: 50%;
+}
+
+.text-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.text-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ccc;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Video Button & User Count */
+.info-section {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.video-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.video-button:hover {
+  transform: scale(1.1);
+}
+
+.play-icon {
+  color: #0a84ff;
+  font-size: 20px;
+}
+
+/* User Count */
+.user-count {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+.user-count span {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.user-count p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.feature-item {
+  background: rgba(8, 36, 73, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.08);
+  box-shadow: 0 4px 18px rgba(0, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 30px 20px;
+  flex: 1 1 200px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #00ffff66, #052442);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  box-shadow: 0 0 15px #00ffff99;
+}
+
+.feature-icon {
+  font-size: 30px;
+  color: #00ffff;
+}
+
+.feature-item p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+
+/* Wallet Logos Grid */
+.wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.wallet-grid img {
+  max-height: 50px;
+  max-width: 130px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.wallet-grid img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Image-specific tweaks */
+.wallet-grid img[alt="Metamask"] {
+  max-height: 60px;
+  max-width: 140px;
+}
+
+.wallet-grid img[alt="Trust Wallet"] {
+  max-height: 55px;
+}
+
+.wallet-grid img[alt="Web3"] {
+  max-width: 110px;
+}
+
+.wallet-grid img[alt="Coinbase"] {
+  max-width: 100px;
+}
+
+/* Right Image Section */
+.image-section img {
+  max-width: 450px;
+  height: auto;
+}
+
+/* Responsive Tweaks */
+@media screen and (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section {
+    max-width: 100%;
+  }
+
+  .info-section {
+    justify-content: center;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .wallets {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .wallet-grid img {
+    height: 50px;
+  }
+
+  .image-section img {
+    margin-top: 30px;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-item {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wallet-grid img {
+    width: 100px;
+  }
+}

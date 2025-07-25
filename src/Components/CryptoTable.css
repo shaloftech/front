@@ -1,0 +1,114 @@
+.crypto-table-container {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.crypto-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.crypto-table thead {
+  background: #eaf1f8;
+}
+
+.crypto-table th,
+.crypto-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.coin-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coin-info img {
+  width: 30px;
+  height: 30px;
+}
+
+.coin-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-info strong {
+  font-weight: bold;
+  color: black;
+}
+
+.coin-info span {
+  font-size: 14px;
+  color: #4b5c6b;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.trade-button {
+  background: white;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.trade-button:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .crypto-table thead {
+    display: none; /* Hide Table Header */
+  }
+
+  .crypto-table tbody {
+    display: block;
+  }
+
+  .crypto-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .crypto-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .crypto-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #4b5c6b;
+    flex: 1;
+  }
+
+  .crypto-table td:last-child {
+    display: flex;
+    justify-content: center;
+  }
+}
